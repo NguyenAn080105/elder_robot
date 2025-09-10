@@ -25,7 +25,7 @@ colcon build --packages-select elder_robot
 source install/setup.bash
 ```
 ---
-##▶️ Run Simulation
+## ▶️ Run Simulation
 1. Launch the robot in Gazebo:
 ```bash
 ros2 launch elder_robot elder_robot.launch.py
