@@ -38,7 +38,10 @@ def generate_launch_description():
                 'gazebo.launch.py'
             )
         ),
-        launch_arguments={'world': world_file}.items(),
+        launch_arguments={
+            'world': world_file,
+            'use_sim_time': use_sim_time
+        }.items(),
     )
 
     # Robot state publisher
