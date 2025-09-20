@@ -32,10 +32,10 @@
             <ray>
                 <scan>
                     <horizontal>
-                        <samples>360</samples>
+                        <samples>359</samples>
                         <min_angle>-3.14</min_angle>
-                        <max_angle>3.14</max_angle>
-                    </horizontal>S
+                        <max_angle>3.122</max_angle>
+                    </horizontal>
                 </scan>
                 <range>
                     <min>0.3</min>
@@ -46,6 +46,7 @@
             <plugin name="gazebo_ros_ray_sensor" filename="libgazebo_ros_ray_sensor.so">
                 <ros>
                     <argument>~/out:=scan</argument>
+                    <parameter name="frame_name" value="laser_frame"/>
                 </ros>
                 <output_type>sensor_msgs/LaserScan</output_type>
                 <frameName>laser_frame</frameName>

@@ -40,12 +40,10 @@
       <ray>
         <scan>
           <horizontal>
-            <samples>360</samples>
+            <samples>359</samples>
             <min_angle>-3.14</min_angle>
-            <max_angle>3.14</max_angle>
+            <max_angle>3.122</max_angle>
           </horizontal>
-          S
-                
         </scan>
         <range>
           <min>0.3</min>
@@ -56,6 +54,7 @@
       <plugin filename="libgazebo_ros_ray_sensor.so" name="gazebo_ros_ray_sensor">
         <ros>
           <argument>~/out:=scan</argument>
+          <parameter name="frame_name" value="laser_frame"/>
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type>
         <frameName>laser_frame</frameName>
@@ -221,9 +220,6 @@
       <wheel_diameter>0.064</wheel_diameter>
       <max_wheel_torque>20</max_wheel_torque>
       <max_wheel_acceleration>1.0</max_wheel_acceleration>
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <publishOdomTF>true</publishOdomTF>
       <odometry_frame>odom</odometry_frame>
       <robot_base_frame>base_footprint</robot_base_frame>
       <publish_odom>true</publish_odom>
@@ -236,7 +232,7 @@
       </ros>
     </plugin>
     <plugin filename="libgazebo_ros_joint_state_publisher.so" name="joint_state_publisher">
-      <update_rate>50</update_rate>
+      <update_rate>10</update_rate>
       <joint_name>left_front_wheel_joint</joint_name>
       <joint_name>right_front_wheel_joint</joint_name>
       <joint_name>left_rear_wheel_joint</joint_name>

@@ -5,6 +5,7 @@
   <gazebo>
     <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
       <update_rate>10</update_rate>
+
       <left_joint>left_rear_wheel_joint</left_joint>
       <right_joint>right_rear_wheel_joint</right_joint>
 
@@ -13,10 +14,6 @@
 
       <max_wheel_torque>20</max_wheel_torque>
       <max_wheel_acceleration>1.0</max_wheel_acceleration>
-
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <publishOdomTF>true</publishOdomTF>
 
       <odometry_frame>odom</odometry_frame>
       <robot_base_frame>base_footprint</robot_base_frame>
@@ -33,7 +30,7 @@
     </plugin>
     
     <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
-      <update_rate>50</update_rate>
+      <update_rate>10</update_rate>
       <joint_name>left_front_wheel_joint</joint_name>
       <joint_name>right_front_wheel_joint</joint_name>
       <joint_name>left_rear_wheel_joint</joint_name>
